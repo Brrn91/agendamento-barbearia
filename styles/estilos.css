@@ -2,6 +2,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+/* Padrões */
+
+:root {
+  --texto-destaque: #061D7A;
+  --texto-destaque-inverso: #9C0A00;
+  --texto: #ffffff;
+  --escuro: #282625;
+  --claro: #BFB29B;
+
+  --sombras: #0e0d0c 2px 2px 4px;
+}
+
 /* Reset global */
 * {
   margin: 0;
@@ -11,4 +23,16 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background: rgba(0, 0, 0, 0.5) url(../assets/img/bg.jpg) center/cover no-repeat fixed;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* Suporte para o safari */
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 4.5rem;
+  background-color: var(--escuro);
+  box-shadow: #0e0d0c 2px 2px 4px;
 }
