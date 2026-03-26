@@ -9,8 +9,7 @@
 /* Padrões */
 
 :root {
-  --texto-destaque: #061D7A;
-  --texto-destaque-inverso: #bd0e02;
+  --texto-destaque: #bd0e02;
   --texto: #ffffff;
   --escuro: #282625;
   --claro: #BFB29B;
@@ -28,6 +27,7 @@
 body {
   font-family: "Ubuntu", sans-serif;
   background: rgba(0, 0, 0, 0.5) url(../assets/img/bg.jpg) center/cover no-repeat fixed;
+  backdrop-filter: blur(6px);
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden; /* Garante que nada escape pela lateral */
@@ -47,8 +47,8 @@ nav {
 }
 
 ul {
-  height: 100%;
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -63,8 +63,9 @@ ul > li > a {
 }
 
 ul > li > a:hover {
-  color: var(--texto-destaque-inverso);
+  color: var(--texto-destaque);
   text-decoration: underline;
+  transition: all 0.3s ease;
 }
 
 li > a > i {
@@ -78,27 +79,21 @@ li > a > i {
   vertical-align: middle; /* Alinha com o texto ao lado */
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* O calc subtrai a altura do header para o main caber na tela sem rolar */
-  min-height: calc(100vh - 4.5rem);
+
+footer {
+  background-color: var(--escuro);
   width: 100%;
-}
-
-.agendamento {
+  height: 1.5rem;
+  color: var(--claro);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Espaçamento entre o título e o botão */
 }
 
-.agendamento-btn {
-  padding: 1rem 2rem;
-  width: fit-content; /* O botão só ocupa o espaço do texto */
-  align-self: center; /* Centraliza o botão dentro da div flex */
-  cursor: pointer;
-  /* Seus estilos de cor aqui */
+footer > a {
+  color: var(--claro);
+  text-decoration: none;
+}
+
+footer > a:hover {
+  color: var(--texto-destaque);
+  text-decoration: underline;
 }
