@@ -1,0 +1,72 @@
+section.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+
+section.login > h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--texto);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+div.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+div.login-container > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+div.login-container > form > div.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div.login-container > form > div.input-group > label {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--escuro);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+div.login-container > form > div.input-group > input {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--escuro);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+div.login-container > form > button {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--escuro);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
