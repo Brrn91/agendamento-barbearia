@@ -26,8 +26,7 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background: url(../assets/img/bg.jpg) center/cover
-    no-repeat fixed;
+  background: url(../assets/img/bg.jpg) center/cover no-repeat fixed;
   backdrop-filter: blur(6px);
   min-height: 100vh;
   width: 100%;
@@ -48,7 +47,7 @@ nav {
 }
 
 ul {
-  max-width: 500px;
+  max-width: 31.25rem;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -61,8 +60,8 @@ ul > li > a {
   text-decoration: none;
   color: var(--texto);
   text-transform: uppercase;
-  margin: 20px;
-  padding: 15px;
+  margin: 1.25rem;
+  padding: 0.9375rem;
 }
 
 ul > li > a:hover {
@@ -72,14 +71,18 @@ ul > li > a:hover {
 }
 
 li > a > i {
-  padding-right: 6px;
-  width: 22px;
-  height: 22px;
+  padding-right: 0.375rem;
+  width: 1.375rem;
+  height: 1.375rem;
   font-size: 1.2rem; /* Adicionado para alterar o tamanho do ícone */
   display: inline-flex; /* Melhora o alinhamento interno */
   align-items: center;
   justify-content: center;
   vertical-align: middle; /* Alinha com o texto ao lado */
+}
+
+hr {
+  display: none;
 }
 
 main {
@@ -89,16 +92,16 @@ main {
   align-items: center;
   min-height: calc(100dvh - 8rem); /* Ajustado para o tamanho do footer */
   width: 100%;
-  padding: 20px; /* Evita que o texto encoste nas bordas em telas pequenas */
+  padding: 1.25rem; /* Evita que o texto encoste nas bordas em telas pequenas */
 }
 
 section > h1 {
   text-transform: uppercase;
   color: var(--texto);
   font-size: clamp(1.5rem, 5vw, 2.5rem); /* Fonte responsiva */
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
-  border-bottom: 2px solid var(--texto);
-  margin-bottom: 10px;
+  text-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.5); /* Sombra suave */
+  border-bottom: 0.125rem solid var(--texto);
+  margin-bottom: 0.625rem;
   font-weight: 500;
 }
 
@@ -115,7 +118,7 @@ button > a:hover {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espaçamento entre o título e o botão */
+  gap: 1.25rem; /* Espaçamento entre o título e o botão */
 }
 
 .agendamento-btn {
@@ -148,14 +151,14 @@ button > a:hover {
   color: var(--claro);
   /* Um leve aumento de tamanho melhora a experiência */
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.4);
 }
 
 footer {
   background-color: var(--escuro);
   width: 100%;
   min-height: 3rem;
-  padding: 10px 20px; /* Padding para dar respiro ao texto */
+  padding: 0.625rem 1.25rem; /* Padding para dar respiro ao texto */
   color: var(--claro);
   text-align: center;
   display: flex; /* Ajuda no alinhamento interno */
@@ -167,7 +170,7 @@ footer {
 footer > a {
   color: var(--claro);
   text-decoration: none;
-  padding-left: 8px;
+  padding-left: 0.5rem;
   font-weight: 700;
 }
 
@@ -179,11 +182,18 @@ footer > a:hover {
 @media screen and (max-width: 768px) {
   header {
     height: auto; /* Permite que o header se ajuste ao menu vertical */
-    padding: 15px 0;
+    padding: 0.9375rem 0;
   }
 
   nav {
     height: auto;
+  }
+
+  hr {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--texto);
   }
 
   ul {
@@ -191,16 +201,22 @@ footer > a:hover {
     height: auto;
     max-height: none; /* Remove restrições de altura */
     flex-direction: column;
-    gap: 15px; /* Cria espaçamento uniforme entre os itens */
+    gap: 0.9375rem; /* Cria espaçamento uniforme entre os itens */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center;
   }
 
   ul li a {
     font-size: 1.1rem; /* Melhora a legibilidade no toque */
-    padding: 10px;
+    padding: 0.625rem;
     display: block; /* Aumenta a área de clique */
   }
+
+  ul > li > a:hover {
+  background-color: var(--destaque);
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+}
 
   main {
     /* Ajusta o cálculo da altura para o novo tamanho do header em mobile */
