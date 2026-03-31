@@ -1,165 +1,44 @@
-/* Fonte importada: Ubuntu */
-
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-
-/* Ícones */
-
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-
-/* Padrões */
-
-:root {
-  --destaque: #bd0e02;
-  --texto: #ffffff;
-  --escuro: #282625;
-  --claro: #bfb29b;
-
-  --sombras: rgba(14, 13, 12, 0.6) 2px 2px 4px;
-}
-
-/* Reset global */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Ubuntu", sans-serif;
-  background: rgba(0, 0, 0, 0.5) url(../assets/img/bg.jpg) center/cover
-    no-repeat fixed;
-  backdrop-filter: blur(6px);
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden; /* Garante que nada escape pela lateral */
-}
-
-header {
-  width: 100%;
-  height: 4.5rem;
-  background-color: var(--escuro);
-  box-shadow: var(--sombras);
-}
-
-nav {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-ul {
-  max-width: 500px;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style-type: none;
-}
-
-ul > li > a {
-  text-decoration: none;
-  color: var(--texto);
-  text-transform: uppercase;
-  margin: 20px;
-  padding: 15px;
-}
-
-ul > li > a:hover {
-  background-color: var(--destaque);
-  transition: all 0.3s ease;
-  border-radius: 1rem;
-}
-
-li > a > i {
-  padding-right: 6px;
-  width: 22px;
-  height: 22px;
-  font-size: 1.2rem; /* Adicionado para alterar o tamanho do ícone */
-  display: inline-flex; /* Melhora o alinhamento interno */
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle; /* Alinha com o texto ao lado */
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100dvh - 8rem); /* Ajustado para o tamanho do footer */
-  width: 100%;
-  padding: 20px; /* Evita que o texto encoste nas bordas em telas pequenas */
-}
-
 section > h1 {
     color: var(--texto);
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: center;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--texto);
     padding-bottom: 6px;
     width: 100%;
+    font-weight: 500;
 }
 
-footer {
-  background-color: var(--escuro);
-  width: 100%;
-  min-height: 3rem;
-  padding: 10px 20px; /* Padding para dar respiro ao texto */
-  color: var(--claro);
-  text-align: center;
-  display: flex; /* Ajuda no alinhamento interno */
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9rem; /* Tamanho base melhor para desktop */
-}
-
-footer > a {
-  color: var(--claro);
-  text-decoration: none;
-  padding-left: 8px;
-  font-weight: 700;
-}
-
-footer > a:hover {
-  color: var(--destaque);
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    height: auto; /* Permite que o header se ajuste ao menu vertical */
-    padding: 15px 0;
-  }
-
-  nav {
-    height: auto;
-  }
-
-  ul {
-    width: 100%; /* Remove os 500px fixos do desktop */
-    height: auto;
-    max-height: none; /* Remove restrições de altura */
+div.contatos-container {
+    display: flex;
     flex-direction: column;
-    gap: 15px; /* Cria espaçamento uniforme entre os itens */
-    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-bottom: .8rem;
+    color: var(--texto);
+}
+
+div.contatos-container > div {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-  }
+    align-items: center;
+    width: 100%;
+    padding-bottom: .8rem;
+    color: var(--texto);
+}
 
-  ul li a {
-    font-size: 1.1rem; /* Melhora a legibilidade no toque */
-    padding: 10px;
-    display: block; /* Aumenta a área de clique */
-  }
+div.contatos-container > div > i {
+    padding-right: .5rem;
+}
 
-  main {
-    /* Ajusta o cálculo da altura para o novo tamanho do header em mobile */
-    min-height: calc(100dvh - 10rem);
-  }
-
-  footer {
-    font-size: 0.8rem; /* Um pouco menor para caber melhor em celulares */
-    line-height: 1.4; /* Melhora o espaçamento entre linhas se o texto quebrar */
-  }
+div.mapa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: .8rem;
+    color: var(--texto);
 }
