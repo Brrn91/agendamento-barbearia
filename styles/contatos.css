@@ -47,6 +47,10 @@ div.mapa {
   color: var(--texto);
 }
 
+footer {
+  margin-top: -0.75rem;
+}
+
 @media (max-width: 768px) {
   div.mapa > iframe {
     width: 100%;

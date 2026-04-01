@@ -165,6 +165,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 0.9rem; /* Tamanho base melhor para desktop */
+  margin-top: .5rem;
 }
 
 footer > a {
