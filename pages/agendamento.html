@@ -33,7 +33,39 @@
     </header>
 
     <main>
-
+        <section class="agendamento">
+            <h1>Agendamento</h1>
+            <div class="agendamento-container">
+                <form action="" method="post" autocomplete="off">
+                    <div class="input-group" aria-label="Serviço" aria-required="true">
+                        <label for="servico">Serviço</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="corte">Corte de cabelo</option>
+                            <option value="barba">Barba</option>
+                            <option value="corte-barba">Corte de cabelo e barba</option>
+                        </select>
+                    </div>
+                    <div class="input-group" aria-label="Barbeiro" aria-required="true">
+                        <label for="barbeiro">Barbeiro</label>
+                        <select id="barbeiro" name="barbeiro" required>
+                            <option value="">Selecione um barbeiro</option>
+                            <option value="barbeiro1">Barbeiro 1</option>
+                            <option value="barbeiro2">Barbeiro 2</option>
+                        </select>
+                    </div>
+                    <div class="input-group" aria-label="Data" aria-required="true">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="input-group" aria-label="Hora" aria-required="true">
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                    <button type="submit" class="agendamento-btn">Agendar</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank"

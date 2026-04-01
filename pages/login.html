@@ -37,16 +37,16 @@
         <section class="login">
             <h1>Login</h1>
             <div class="login-container">
-                <form action="">
-                    <div class="input-group">
-                        <label for="email" aria-label="Email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Digite seu email">
+                <form action="" method="post" autocomplete="off">
+                    <div class="input-group" aria-label="Email" aria-required="true">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
                     </div>
-                    <div class="input-group">
-                        <label for="senha" aria-label="Senha">Senha</label>
-                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                    <div class="input-group" aria-label="Senha" aria-required="true">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                     </div>
-                    <a class="login-btn" href="../pages/painel.html">Login</a>
+                    <a type="submit" class="login-btn" href="../pages/painel.html">Login</a>
                     <a class="forgot-password" href="../pages/esqueci-senha.html">Esqueci minha senha</a>
                     <a class="register" href="../pages/cadastro.html">Não tenho uma conta</a>
                 </form>
