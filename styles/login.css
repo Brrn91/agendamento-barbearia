@@ -64,7 +64,7 @@ div.login-container > form > div.input-group > input {
     border-radius: 0.625rem;
 }
 
-div.login-container > form > button {
+div.login-container > form > a.login-btn {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--escuro);
     margin-bottom: 0.5rem;
@@ -72,4 +72,12 @@ div.login-container > form > button {
     width: 100%;
     padding: 1rem;
     border-radius: 0.625rem;
+    background-color: var(--claro);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+div.login-container > form > a.login-btn:hover {
+    background-color: var(--escuro);
+    color: var(--claro);
 }
