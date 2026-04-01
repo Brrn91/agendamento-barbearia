@@ -82,6 +82,34 @@ div.login-container > form > a.login-btn:hover {
     color: var(--claro);
 }
 
+div.login-container > form > a.forgot-password {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--claro);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+div.login-container > form > a.forgot-password:hover {
+    color: var(--destaque);
+}
+
+div.login-container > form > a.register {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--claro);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+div.login-container > form > a.register:hover {
+    color: var(--destaque);
+}
+
 @media screen and (max-width: 768px) {
 
 
