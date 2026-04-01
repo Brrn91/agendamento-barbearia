@@ -13,6 +13,7 @@
   --texto: #ffffff;
   --escuro: #282625;
   --claro: #bfb29b;
+  --azul: #007bff;
 
   --sombras: rgba(14, 13, 12, 0.6) 2px 2px 4px;
 }
@@ -148,8 +149,8 @@ button > a:hover {
   font-family: "Ubuntu", sans-serif;
 
   /* Cores e Bordas */
-  background-color: var(--claro);
-  color: var(--escuro);
+  background-color: var(--azul);
+  color: var(--texto);
   border-radius: 1rem;
   border: none;
   box-shadow: var(--sombras);
@@ -160,8 +161,8 @@ button > a:hover {
 }
 
 .agendamento-btn:hover {
-  background-color: var(--escuro);
-  color: var(--claro);
+  background-color: var(--destaque);
+  color: var(--texto);
   /* Um leve aumento de tamanho melhora a experiência */
   transform: scale(1.05);
   box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.4);
@@ -189,7 +190,7 @@ footer > a {
 }
 
 footer > a:hover {
-  color: var(--texto-destaque);
+  color: var(--azul);
   text-decoration: underline;
 }
 
