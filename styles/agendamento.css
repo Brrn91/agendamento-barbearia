@@ -30,6 +30,10 @@ form {
   padding: 0 1.25rem;
 }
 
+label {
+  color: var(--texto);
+}
+
 div.agendamento-container {
   width: 100%;
   max-width: 31.25rem;
