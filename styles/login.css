@@ -128,6 +128,42 @@ div.login-container > form > a.register:hover {
 
 /* Modal */
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-group > input {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--escuro);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.625rem;
+}
+
+.input-group > button {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  background-color: var(--azul);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.input-group > button:hover {
+  background-color: var(--destaque);
+  color: var(--texto);
+}
+
 h1,
 h3 {
   letter-spacing: 0.25rem;
@@ -143,6 +179,34 @@ h1 {
 
 h2 {
   font-size: 1.25rem;
+}
+
+.forgot-password-btn {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  background-color: var(--azul);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.forgot-password-btn:hover {
+  background-color: var(--destaque);
+  color: var(--texto);
+}
+
+.forgot-password-input {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--escuro);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.625rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -162,6 +226,34 @@ h2 {
   h3 {
     line-height: 1;
   }
+}
+
+.forgot-password-btn {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  background-color: var(--azul);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.forgot-password-btn:hover {
+  background-color: var(--destaque);
+  color: var(--texto);
+}
+
+.forgot-password-input {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--escuro);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.625rem;
 }
 
 .botao {
