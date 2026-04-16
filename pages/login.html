@@ -46,8 +46,8 @@
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                     </div>
-                    <a type="submit" class="login-btn" href="../pages/painel.html">Login</a>
-                    <a class="forgot-password botao-modal">Esqueci minha senha</a>
+                    <button type="submit" class="login-btn" onclick="login(event)">Login</button>
+                    <a class="forgot-password botao-modal" onclick="esqueceuASenha()">Esqueci minha senha</a>
                     <a class="register" href="../pages/cadastro.html">Não tenho uma conta</a>
                 </form>
             </div>
@@ -59,8 +59,8 @@
                     <h2>Esqueci minha senha</h2>
                         <form action="" method="post" autocomplete="off">
                         <div class="input-group" aria-label="Email" aria-required="true">
-                            <input class="forgot-password-input" type="email" id="email" name="email" placeholder="Digite seu email" required>
-                            <button class="forgot-password-btn" type="submit" name="enviar" aria-label="Enviar email">Enviar</button>
+                            <input class="forgot-password-input" type="email" id="email-recuperacao" name="email-recuperacao" placeholder="Digite seu email" required>
+                            <button class="forgot-password-btn" type="submit" name="enviar" aria-label="Enviar email" onclick="redefinirSenha(event)">Enviar</button>
                         </div>
                         <button class="botao-fechar">
                             <i class="bi bi-x"></i>

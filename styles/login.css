@@ -64,7 +64,7 @@ div.login-container > form > div.input-group > input {
   border-radius: 0.625rem;
 }
 
-div.login-container > form > a.login-btn {
+div.login-container > form > button.login-btn {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--texto);
   margin-bottom: 0.5rem;
@@ -77,7 +77,7 @@ div.login-container > form > a.login-btn {
   transition: all 0.3s ease;
 }
 
-div.login-container > form > a.login-btn:hover {
+div.login-container > form > button.login-btn:hover {
   background-color: var(--destaque);
   color: var(--texto);
 }
@@ -92,6 +92,14 @@ div.login-container > form > a.forgot-password {
   transition: all 0.3s ease;
   cursor: pointer;
   background-color: transparent;
+}
+
+div.login-container > form > button.login-btn {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
 }
 
 div.login-container > form > a.forgot-password:hover {
