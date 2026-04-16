@@ -98,6 +98,10 @@ div.login-container > form > a.forgot-password:hover {
   color: var(--destaque);
 }
 
+div.login-container > form > a.forgot-password:focus {
+  outline: none;
+}
+
 div.login-container > form > a.register {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--azul);
