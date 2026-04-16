@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - Barbearia</title>
+    <!--Styles-->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/cadastro.css" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Menu Principal">
+        <ul role="list">
+          <li class="index"><a href="../index.html">
+              <i class="bi bi-house"></i>
+              Início</a>
+          </li>
+          <hr>
+          <li class="contatos"><a href="../pages/contatos.html">
+              <i class="bi bi-telephone"></i>
+              Contatos</a>
+          </li>
+          <hr>
+          <li class="login"><a href="../pages/login.html">
+              <i class="bi bi-person"></i>
+              Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="cadastro">
+        <h1>Cadastro</h1>
+        <form action="" method="post" autocomplete="off">
+          <div class="input-group" aria-label="Nome" aria-required="true">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" />
+          </div>
+          <div class="input-group" aria-label="Email" aria-required="true">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="input-group" aria-label="Senha" aria-required="true">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" />
+          </div>
+          <a type="submit" class="cadastro-btn" href="../pages/painel.html">Cadastrar</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
