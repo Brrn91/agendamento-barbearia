@@ -179,7 +179,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 0.9rem; /* Tamanho base melhor para desktop */
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 footer > a {
@@ -212,13 +212,13 @@ footer > a:hover {
   }
 
   ul {
-    width: 100%; /* Remove os 500px fixos do desktop */
+    width: auto; /* Centraliza a lista horizontalmente no mobile */
     height: auto;
     max-height: none; /* Remove restrições de altura */
-    flex-direction: column;
-    gap: 0.9375rem; /* Cria espaçamento uniforme entre os itens */
+    flex-direction: row;
+    gap: 0.9rem; /* Cria espaçamento uniforme entre os itens */
     align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   ul li a {
@@ -227,11 +227,19 @@ footer > a:hover {
     display: block; /* Aumenta a área de clique */
   }
 
+  li.login {
+    padding-right: 1rem;
+  }
+
+  li.inicio {
+    padding-left: 1rem;
+  }
+
   ul > li > a:hover {
-  background-color: var(--destaque);
-  transition: all 0.3s ease;
-  border-radius: 1rem;
-}
+    background-color: var(--destaque);
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+  }
 
   main {
     /* Ajusta o cálculo da altura para o novo tamanho do header em mobile */
