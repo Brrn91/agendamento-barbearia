@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: blob:; connect-src 'self';" />
     <title>Cadastro - Barbearia</title>
-    <!--Styles-->
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/cadastro.css" />
   </head>
@@ -31,27 +31,34 @@
     </header>
 
     <main>
-      <section class="cadastro" aria-label="Cadastro">
+      <section class="cadastro card-glass" aria-label="Cadastro">
         <h1>Cadastro</h1>
-        <form action="" method="post" autocomplete="off" aria-label="Formulário de Cadastro">
+        <form id="form-cadastro" autocomplete="on" novalidate aria-label="Formulário de Cadastro">
           <div class="input-group" aria-label="Nome" aria-required="true">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required/>
+            <label for="nome"><i class="bi bi-person"></i> Nome</label>
+            <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome completo" autocomplete="name">
           </div>
           <div class="input-group" aria-label="Email" aria-required="true">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required/>
+            <label for="email"><i class="bi bi-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email">
           </div>
           <div class="input-group" aria-label="Senha" aria-required="true">
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" required/>
+            <label for="senha"><i class="bi bi-lock"></i> Senha</label>
+            <input type="password" id="senha" name="senha" required minlength="6" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+            <span class="password-hint">Mínimo de 6 caracteres</span>
           </div>
-          <a type="submit" class="cadastro-btn" href="../pages/login.html">Cadastrar</a>
+          <div class="input-group" aria-label="Confirmar Senha" aria-required="true">
+            <label for="confirmar-senha"><i class="bi bi-lock-fill"></i> Confirmar Senha</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required minlength="6" placeholder="Repita a senha" autocomplete="new-password">
+            <span class="password-error" id="password-error"></span>
+          </div>
+          <button type="submit" class="cadastro-btn">Cadastrar</button>
         </form>
       </section>
     </main>
     
     <footer>Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank"
-            rel="nofollow">Lucas Bruno</a></footer>
+            rel="noopener noreferrer">Lucas Bruno</a></footer>
+    <script src="../scripts/cadastro.js"></script>
   </body>
 </html>

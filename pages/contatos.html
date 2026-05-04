@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Style-->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: blob:; frame-src https://www.google.com https://maps.google.com; connect-src 'self';" />
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/contatos.css">
     <title>Contatos - Barbearia</title>
@@ -33,42 +33,38 @@
         </nav>
     </header>
 
-    <!--Separador-->
-
     <main>
         <section class="contatos">
             <h1>Contatos</h1>
             <div class="contatos-container">
-                <div class="telefone">
+                <a href="tel:+5547999999999" class="telefone">
                     <i class="bi bi-telephone"></i>
                     <p>Telefone: (47) 99999-9999</p>
-                </div>
+                </a>
                 <hr>
-                <div class="whatsapp">
+                <a href="https://wa.me/5547999999999" target="_blank" rel="noopener noreferrer" class="whatsapp">
                     <i class="bi bi-whatsapp"></i>
                     <p>WhatsApp: (47) 99999-9999</p>
-                </div>
+                </a>
                 <hr>
-                <div class="email">
+                <a href="mailto:barbearia.do.fulano@gmail.com" class="email">
                     <i class="bi bi-envelope"></i>
                     <p>Email: barbearia.do.fulano@gmail.com</p>
-                </div>
+                </a>
             </div>
-            <!--Divisor-->
             <div class="mapa">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.7342163173503!2d-48.84708922491222!3d-26.303569568027687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb0496f28938b%3A0xa1121816bd54ced8!2sR.%20das%20Palmeiras%20-%20Centro%2C%20Joinville%20-%20SC%2C%2089201-040!5e1!3m2!1spt-BR!2sbr!4v1775076446985!5m2!1spt-BR!2sbr"
                     width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade"
+                    sandbox="allow-scripts allow-same-origin allow-popups"
+                    title="Localização da Barbearia no Google Maps"></iframe>
             </div>
         </section>
     </main>
 
-    <!--Separador-->
-
     <footer>Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank"
-            rel="nofollow">Lucas Bruno</a></footer>
-    <!--JavaScript-->
+            rel="noopener noreferrer">Lucas Bruno</a></footer>
 </body>
 
 </html>

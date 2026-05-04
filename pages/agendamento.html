@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: blob:; connect-src 'self';" />
     <title>Agendamento - Barbearia</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/agendamento.css">
@@ -33,16 +34,16 @@
     </header>
 
     <main>
-        <section class="agendamento">
+        <section class="agendamento card-glass">
             <h1>Agendamento</h1>
             <div class="agendamento-container">
-                <form action="" method="post" autocomplete="off">
+                <form id="form-agendamento" autocomplete="on" novalidate>
                     <div class="input-group" aria-label="Nome" aria-required="true">
-                        <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" required placeholder="Escreva seu nome">
+                        <label for="name"><i class="bi bi-person"></i> Nome</label>
+                        <input type="text" name="name" id="name" required minlength="3" placeholder="Escreva seu nome" autocomplete="name">
                     </div>
                     <div class="input-group" aria-label="Serviço" aria-required="true">
-                        <label for="servico">Serviço</label>
+                        <label for="servico"><i class="bi bi-scissors"></i> Serviço</label>
                         <select id="servico" name="servico" required>
                             <option value="">Selecione um serviço</option>
                             <option value="corte">Corte de cabelo</option>
@@ -51,7 +52,7 @@
                         </select>
                     </div>
                     <div class="input-group" aria-label="Barbeiro" aria-required="true">
-                        <label for="barbeiro">Barbeiro</label>
+                        <label for="barbeiro"><i class="bi bi-person-workspace"></i> Barbeiro</label>
                         <select id="barbeiro" name="barbeiro" required>
                             <option value="">Selecione um barbeiro</option>
                             <option value="barbeiro1">Barbeiro 1</option>
@@ -59,12 +60,13 @@
                         </select>
                     </div>
                     <div class="input-group" aria-label="Data" aria-required="true">
-                        <label for="data">Data</label>
+                        <label for="data"><i class="bi bi-calendar3"></i> Data</label>
                         <input type="date" id="data" name="data" required>
                     </div>
                     <div class="input-group" aria-label="Hora" aria-required="true">
-                        <label for="hora">Hora</label>
-                        <input type="time" id="hora" name="hora" required>
+                        <label for="hora"><i class="bi bi-clock"></i> Hora</label>
+                        <input type="time" id="hora" name="hora" required min="09:00" max="20:00">
+                        <span class="time-hint">Horário de funcionamento: 09h às 20h</span>
                     </div>
                     <button type="submit" class="agendamento-btn">Agendar</button>
                 </form>
@@ -73,7 +75,8 @@
     </main>
 
     <footer>Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank"
-            rel="nofollow">Lucas Bruno</a></footer>
+            rel="noopener noreferrer">Lucas Bruno</a></footer>
+    <script src="../scripts/agendamento.js"></script>
 </body>
 
 </html>
