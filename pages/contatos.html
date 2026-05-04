@@ -5,57 +5,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: blob:; frame-src https://www.google.com https://maps.google.com; connect-src 'self';" />
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/contatos.css">
+    <link rel="stylesheet" href="../styles/output.css">
     <title>Contatos - Barbearia</title>
 </head>
 
-<body>
-    <header>
-        <nav aria-label="Menu Principal">
-            <ul role="list">
-                <li><a href="../index.html">
-                        <i class="bi bi-house"></i>
-                        Início</a>
-                </li>
-                <hr>
-                <li><a href="../pages/contatos.html">
-                        <i class="bi bi-telephone"></i>
-                        Contatos</a>
-                </li>
-                <hr>
-                <li>
-                    <a href="../pages/login.html">
-                        <i class="bi bi-person"></i>
-                        Login</a>
-                </li>
-            </ul>
-        </nav>
+<body class="font-ubuntu">
+    <header class="sticky top-0 z-50 w-full bg-escuro shadow-lg">
+        <div class="flex items-center justify-between px-4 h-16 max-w-5xl mx-auto">
+            <button id="menu-toggle" class="md:hidden text-white p-2 rounded hover:bg-destaque transition" aria-label="Abrir menu" aria-expanded="false">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+            <nav class="w-full md:w-auto" aria-label="Menu Principal">
+                <ul id="menu" role="list" class="hidden md:flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 w-full md:w-auto py-4 md:py-0">
+                    <li>
+                        <a href="../index.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
+                            <i class="bi bi-house"></i>
+                            <span>Início</span>
+                        </a>
+                    </li>
+                    <li class="hidden md:block w-px h-8 bg-white/20"></li>
+                    <li>
+                        <a href="../pages/contatos.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
+                            <i class="bi bi-telephone"></i>
+                            <span>Contatos</span>
+                        </a>
+                    </li>
+                    <li class="hidden md:block w-px h-8 bg-white/20"></li>
+                    <li>
+                        <a href="../pages/login.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
+                            <i class="bi bi-person"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="contatos">
-            <h1>Contatos</h1>
-            <div class="contatos-container">
-                <a href="tel:+5547999999999" class="telefone">
-                    <i class="bi bi-telephone"></i>
+    <main class="flex flex-col items-center justify-center min-h-[calc(100dvh-8rem)] w-full p-5">
+        <section class="contatos card-glass animate-fade-in-up flex flex-col items-center max-w-lg w-full p-8">
+            <h1 class="text-white text-xl md:text-2xl text-center drop-shadow-lg mb-5 border-b border-white pb-1.5 w-full font-medium">Contatos</h1>
+            <div class="contatos-container flex flex-col justify-evenly items-center w-full pb-6 text-white">
+                <a href="tel:+5547999999999" class="telefone flex flex-row items-center justify-center w-full p-4 text-white text-base md:text-lg font-medium drop-shadow-lg no-underline rounded-xl hover:text-azul hover:bg-azul/10 hover:translate-x-2 transition">
+                    <i class="bi bi-telephone pr-3 text-2xl"></i>
                     <p>Telefone: (47) 99999-9999</p>
                 </a>
-                <hr>
-                <a href="https://wa.me/5547999999999" target="_blank" rel="noopener noreferrer" class="whatsapp">
-                    <i class="bi bi-whatsapp"></i>
+                <hr class="hidden md:block w-4/5 mx-auto bg-white/20 my-2">
+                <a href="https://wa.me/5547999999999" target="_blank" rel="noopener noreferrer" class="whatsapp flex flex-row items-center justify-center w-full p-4 text-white text-base md:text-lg font-medium drop-shadow-lg no-underline rounded-xl hover:text-azul hover:bg-azul/10 hover:translate-x-2 transition">
+                    <i class="bi bi-whatsapp pr-3 text-2xl"></i>
                     <p>WhatsApp: (47) 99999-9999</p>
                 </a>
-                <hr>
-                <a href="mailto:barbearia.do.fulano@gmail.com" class="email">
-                    <i class="bi bi-envelope"></i>
+                <hr class="hidden md:block w-4/5 mx-auto bg-white/20 my-2">
+                <a href="mailto:barbearia.do.fulano@gmail.com" class="email flex flex-row items-center justify-center w-full p-4 text-white text-base md:text-lg font-medium drop-shadow-lg no-underline rounded-xl hover:text-azul hover:bg-azul/10 hover:translate-x-2 transition">
+                    <i class="bi bi-envelope pr-3 text-2xl"></i>
                     <p>Email: barbearia.do.fulano@gmail.com</p>
                 </a>
             </div>
-            <div class="mapa">
+            <div class="mapa flex flex-row justify-center items-center w-full pb-6">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.7342163173503!2d-48.84708922491222!3d-26.303569568027687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb0496f28938b%3A0xa1121816bd54ced8!2sR.%20das%20Palmeiras%20-%20Centro%2C%20Joinville%20-%20SC%2C%2089201-040!5e1!3m2!1spt-BR!2sbr!4v1775076446985!5m2!1spt-BR!2sbr"
-                    width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="w-full max-w-[600px] h-72 md:h-88 border-0 rounded-2xl shadow-2xl"
+                    allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     sandbox="allow-scripts allow-same-origin allow-popups"
                     title="Localização da Barbearia no Google Maps"></iframe>
@@ -63,8 +73,21 @@
         </section>
     </main>
 
-    <footer>Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank"
-            rel="noopener noreferrer">Lucas Bruno</a></footer>
+    <footer class="bg-escuro w-full min-h-[3rem] px-5 py-2.5 text-claro text-center flex justify-center items-center text-sm mt-2">
+        Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank" rel="noopener noreferrer" class="text-claro no-underline pl-2 font-bold hover:text-azul hover:underline transition">Lucas Bruno</a>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        menuToggle?.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            menu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('bi-list');
+            icon.classList.toggle('bi-x-lg');
+        });
+    </script>
 </body>
 
 </html>

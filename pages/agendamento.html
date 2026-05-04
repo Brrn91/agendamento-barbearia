@@ -6,77 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: blob:; connect-src 'self';" />
     <title>Agendamento - Barbearia</title>
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/agendamento.css">
+    <link rel="stylesheet" href="../styles/output.css">
 </head>
 
-<body>
-    <header>
-        <nav aria-label="Menu Principal">
-            <ul role="list">
-                <li><a href="../index.html">
-                        <i class="bi bi-house"></i>
-                        Início</a>
-                </li>
-                <hr>
-                <li><a href="../pages/contatos.html">
-                        <i class="bi bi-telephone"></i>
-                        Contatos</a>
-                </li>
-                <hr>
-                <li>
-                    <a href="../pages/login.html">
-                        <i class="bi bi-person"></i>
-                        Login</a>
-                </li>
-            </ul>
-        </nav>
+<body class="font-ubuntu">
+    <header class="sticky top-0 z-50 w-full bg-escuro shadow-lg">
+        <div class="flex items-center justify-between px-4 h-16 max-w-5xl mx-auto">
+            <button id="menu-toggle" class="md:hidden text-white p-2 rounded hover:bg-destaque transition" aria-label="Abrir menu" aria-expanded="false">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
+            <nav class="w-full md:w-auto" aria-label="Menu Principal">
+                <ul id="menu" role="list" class="hidden md:flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 w-full md:w-auto py-4 md:py-0">
+                    <li>
+                        <a href="../index.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
+                            <i class="bi bi-house"></i>
+                            <span>Início</span>
+                        </a>
+                    </li>
+                    <li class="hidden md:block w-px h-8 bg-white/20"></li>
+                    <li>
+                        <a href="../pages/contatos.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
+                            <i class="bi bi-telephone"></i>
+                            <span>Contatos</span>
+                        </a>
+                    </li>
+                    <li class="hidden md:block w-px h-8 bg-white/20"></li>
+                    <li>
+                        <a href="../pages/login.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
+                            <i class="bi bi-person"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="agendamento card-glass">
-            <h1>Agendamento</h1>
-            <div class="agendamento-container">
-                <form id="form-agendamento" autocomplete="on" novalidate>
-                    <div class="input-group" aria-label="Nome" aria-required="true">
-                        <label for="name"><i class="bi bi-person"></i> Nome</label>
-                        <input type="text" name="name" id="name" required minlength="3" placeholder="Escreva seu nome" autocomplete="name">
+    <main class="flex flex-col items-center justify-center min-h-[calc(100dvh-8rem)] w-full p-5">
+        <section class="agendamento card-glass animate-fade-in-up flex flex-col items-center justify-center w-full max-w-md p-0">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl text-white mb-6 text-center">Agendamento</h1>
+            <div class="agendamento-container w-full px-6 pb-6">
+                <form id="form-agendamento" autocomplete="on" novalidate class="flex flex-col w-full gap-2">
+                    <div class="input-group flex flex-col w-full">
+                        <label for="name" class="text-claro text-sm md:text-base mb-1 text-left pl-1">
+                            <i class="bi bi-person mr-1"></i> Nome
+                        </label>
+                        <input type="text" name="name" id="name" required minlength="3" placeholder="Escreva seu nome" autocomplete="name" class="input-field">
                     </div>
-                    <div class="input-group" aria-label="Serviço" aria-required="true">
-                        <label for="servico"><i class="bi bi-scissors"></i> Serviço</label>
-                        <select id="servico" name="servico" required>
+                    <div class="input-group flex flex-col w-full">
+                        <label for="servico" class="text-claro text-sm md:text-base mb-1 text-left pl-1">
+                            <i class="bi bi-scissors mr-1"></i> Serviço
+                        </label>
+                        <select id="servico" name="servico" required class="input-field">
                             <option value="">Selecione um serviço</option>
                             <option value="corte">Corte de cabelo</option>
                             <option value="barba">Barba</option>
                             <option value="corte-barba">Corte de cabelo e barba</option>
                         </select>
                     </div>
-                    <div class="input-group" aria-label="Barbeiro" aria-required="true">
-                        <label for="barbeiro"><i class="bi bi-person-workspace"></i> Barbeiro</label>
-                        <select id="barbeiro" name="barbeiro" required>
+                    <div class="input-group flex flex-col w-full">
+                        <label for="barbeiro" class="text-claro text-sm md:text-base mb-1 text-left pl-1">
+                            <i class="bi bi-person-workspace mr-1"></i> Barbeiro
+                        </label>
+                        <select id="barbeiro" name="barbeiro" required class="input-field">
                             <option value="">Selecione um barbeiro</option>
                             <option value="barbeiro1">Barbeiro 1</option>
                             <option value="barbeiro2">Barbeiro 2</option>
                         </select>
                     </div>
-                    <div class="input-group" aria-label="Data" aria-required="true">
-                        <label for="data"><i class="bi bi-calendar3"></i> Data</label>
-                        <input type="date" id="data" name="data" required>
+                    <div class="input-group flex flex-col w-full">
+                        <label for="data" class="text-claro text-sm md:text-base mb-1 text-left pl-1">
+                            <i class="bi bi-calendar3 mr-1"></i> Data
+                        </label>
+                        <input type="date" id="data" name="data" required class="input-field">
                     </div>
-                    <div class="input-group" aria-label="Hora" aria-required="true">
-                        <label for="hora"><i class="bi bi-clock"></i> Hora</label>
-                        <input type="time" id="hora" name="hora" required min="09:00" max="20:00">
-                        <span class="time-hint">Horário de funcionamento: 09h às 20h</span>
+                    <div class="input-group flex flex-col w-full">
+                        <label for="hora" class="text-claro text-sm md:text-base mb-1 text-left pl-1">
+                            <i class="bi bi-clock mr-1"></i> Hora
+                        </label>
+                        <input type="time" id="hora" name="hora" required min="09:00" max="20:00" class="input-field">
+                        <span class="time-hint text-xs text-claro mt-1 opacity-70">Horário de funcionamento: 09h às 20h</span>
                     </div>
-                    <button type="submit" class="agendamento-btn">Agendar</button>
+                    <button type="submit" class="btn-primary mt-4">Agendar</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank"
-            rel="noopener noreferrer">Lucas Bruno</a></footer>
+    <footer class="bg-escuro w-full min-h-[3rem] px-5 py-2.5 text-claro text-center flex justify-center items-center text-sm mt-2">
+        Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank" rel="noopener noreferrer" class="text-claro no-underline pl-2 font-bold hover:text-azul hover:underline transition">Lucas Bruno</a>
+    </footer>
     <script src="../scripts/agendamento.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        menuToggle?.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            menu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('bi-list');
+            icon.classList.toggle('bi-x-lg');
+        });
+    </script>
 </body>
 
 </html>
