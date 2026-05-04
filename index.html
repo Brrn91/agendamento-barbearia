@@ -12,42 +12,40 @@
 
 <body class="font-ubuntu">
   <header class="sticky top-0 z-50 w-full bg-escuro shadow-lg">
-    <div class="flex items-center justify-between px-4 h-16 max-w-5xl mx-auto">
-      <button id="menu-toggle" class="md:hidden text-white p-2 rounded hover:bg-destaque transition" aria-label="Abrir menu" aria-expanded="false">
+    <nav class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-center relative" aria-label="Menu Principal">
+      <button id="menu-toggle" class="md:hidden text-white p-2 rounded hover:bg-destaque transition absolute left-4" aria-label="Abrir menu" aria-expanded="false">
         <i class="bi bi-list text-2xl"></i>
       </button>
-      <nav class="w-full md:w-auto" aria-label="Menu Principal">
-        <ul id="menu" role="list" class="hidden md:flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 w-full md:w-auto py-4 md:py-0">
-          <li class="inicio">
-            <a href="./index.html" class="nav-link text-white no-uppercase flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
-              <i class="bi bi-house"></i>
-              <span>Início</span>
-            </a>
-          </li>
-          <li class="hidden md:block w-px h-8 bg-white/20"></li>
-          <li>
-            <a href="./pages/contatos.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
-              <i class="bi bi-telephone"></i>
-              <span>Contatos</span>
-            </a>
-          </li>
-          <li class="hidden md:block w-px h-8 bg-white/20"></li>
-          <li class="login">
-            <a href="./pages/login.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
-              <i class="bi bi-person"></i>
-              <span>Login</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <ul id="menu" role="list" class="hidden md:flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 absolute md:static top-16 left-0 w-full md:w-auto bg-escuro md:bg-transparent shadow-lg md:shadow-none py-4 md:py-0">
+        <li class="inicio">
+          <a href="./index.html" class="flex items-center gap-2 px-5 py-3 md:px-4 md:py-2 text-white no-underline uppercase text-sm font-medium rounded-lg hover:bg-destaque hover:scale-105 transition">
+            <i class="bi bi-house"></i>
+            <span>Início</span>
+          </a>
+        </li>
+        <li class="hidden md:block w-px h-6 bg-white/20"></li>
+        <li>
+          <a href="./pages/contatos.html" class="flex items-center gap-2 px-5 py-3 md:px-4 md:py-2 text-white no-underline uppercase text-sm font-medium rounded-lg hover:bg-destaque hover:scale-105 transition">
+            <i class="bi bi-telephone"></i>
+            <span>Contatos</span>
+          </a>
+        </li>
+        <li class="hidden md:block w-px h-6 bg-white/20"></li>
+        <li class="login">
+          <a href="./pages/login.html" class="flex items-center gap-2 px-5 py-3 md:px-4 md:py-2 text-white no-underline uppercase text-sm font-medium rounded-lg hover:bg-destaque hover:scale-105 transition">
+            <i class="bi bi-person"></i>
+            <span>Login</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="flex flex-col items-center justify-center min-h-[calc(100dvh-8rem)] w-full p-5">
-    <section class="agendamento card-glass animate-fade-in-up flex flex-col items-center text-center gap-5 max-w-sm w-full p-8">
+  <main class="flex flex-col items-center justify-center min-h-[calc(100dvh-4rem)] w-full p-5">
+    <section class="card-glass animate-fade-in-up flex flex-col items-center text-center gap-5 max-w-sm w-full p-8">
       <img src="./assets/img/logo.png" alt="Logo da Barbearia" class="w-full max-w-[12.5rem] mb-4">
       <h1 class="text-white uppercase text-2xl md:text-3xl lg:text-4xl font-medium border-b-2 border-white pb-2 mb-2 drop-shadow-lg">Agende agora mesmo!</h1>
-      <a href="./pages/agendamento.html" class="agendamento-btn inline-block px-8 py-4 w-fit self-center no-underline uppercase font-bold bg-azul text-white rounded-2xl shadow-lg hover:bg-destaque hover:scale-105 transition cursor-pointer">Clique aqui!</a>
+      <a href="./pages/agendamento.html" class="inline-block px-8 py-4 w-fit self-center no-underline uppercase font-bold bg-azul text-white rounded-2xl shadow-lg hover:bg-destaque hover:scale-105 transition cursor-pointer">Clique aqui!</a>
     </section>
   </main>
 
@@ -55,18 +53,7 @@
     Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank" rel="noopener noreferrer" class="text-claro no-underline pl-2 font-bold hover:text-azul hover:underline transition">Lucas Bruno</a>
   </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    menuToggle?.addEventListener('click', () => {
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      menu.classList.toggle('hidden');
-      const icon = menuToggle.querySelector('i');
-      icon.classList.toggle('bi-list');
-      icon.classList.toggle('bi-x-lg');
-    });
-  </script>
+  <script src="./scripts/nav.js"></script>
 </body>
 
 </html>

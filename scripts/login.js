@@ -1,35 +1,33 @@
 const modalFundo = document.querySelector(".modal-fundo");
+const botaoFechar = document.querySelector(".botao-fechar");
 
-function esqueceuASenha() {
-  const botaoModal = document.querySelector(".botao-modal");
-  const botaoFechar = document.querySelector(".botao-fechar");
-
-  botaoModal.addEventListener("click", function () {
-    modalFundo.classList.add("modal-aberto");
+if (modalFundo) {
+  document.querySelectorAll(".botao-modal").forEach(btn => {
+    btn.addEventListener("click", () => {
+      modalFundo.classList.add("modal-aberto");
+    });
   });
 
-  botaoFechar.addEventListener("click", function () {
+  botaoFechar?.addEventListener("click", () => {
     modalFundo.classList.remove("modal-aberto");
   });
 
-  modalFundo.addEventListener("click", function (e) {
+  modalFundo.addEventListener("click", (e) => {
     if (e.target === modalFundo) {
       modalFundo.classList.remove("modal-aberto");
     }
   });
 
-  document.addEventListener("keydown", function (e) {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modalFundo.classList.contains("modal-aberto")) {
       modalFundo.classList.remove("modal-aberto");
     }
   });
 }
 
-esqueceuASenha();
-
 const formRecuperacao = document.getElementById("form-recuperacao");
 if (formRecuperacao) {
-  formRecuperacao.addEventListener("submit", function (event) {
+  formRecuperacao.addEventListener("submit", (event) => {
     event.preventDefault();
     const emailInput = document.getElementById("email-recuperacao");
     const email = emailInput.value.trim();
@@ -49,13 +47,13 @@ if (formRecuperacao) {
 
     alert(`E-mail de recuperação enviado com sucesso para ${email}!`);
     emailInput.value = "";
-    modalFundo.classList.remove("modal-aberto");
+    modalFundo?.classList.remove("modal-aberto");
   });
 }
 
 const formLogin = document.getElementById("form-login");
 if (formLogin) {
-  formLogin.addEventListener("submit", function (event) {
+  formLogin.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = document.getElementById("email").value.trim();
     const senha = document.getElementById("senha").value;

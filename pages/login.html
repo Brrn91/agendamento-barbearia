@@ -11,71 +11,69 @@
 
 <body class="font-ubuntu">
     <header class="sticky top-0 z-50 w-full bg-escuro shadow-lg">
-        <div class="flex items-center justify-between px-4 h-16 max-w-5xl mx-auto">
-            <button id="menu-toggle" class="md:hidden text-white p-2 rounded hover:bg-destaque transition" aria-label="Abrir menu" aria-expanded="false">
+        <nav class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-center relative" aria-label="Menu Principal">
+            <button id="menu-toggle" class="md:hidden text-white p-2 rounded hover:bg-destaque transition absolute left-4" aria-label="Abrir menu" aria-expanded="false">
                 <i class="bi bi-list text-2xl"></i>
             </button>
-            <nav class="w-full md:w-auto" aria-label="Menu Principal">
-                <ul id="menu" role="list" class="hidden md:flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 w-full md:w-auto py-4 md:py-0">
-                    <li class="index">
-                        <a href="../index.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
-                            <i class="bi bi-house"></i>
-                            <span>Início</span>
-                        </a>
-                    </li>
-                    <li class="hidden md:block w-px h-8 bg-white/20"></li>
-                    <li class="contatos">
-                        <a href="../pages/contatos.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
-                            <i class="bi bi-telephone"></i>
-                            <span>Contatos</span>
-                        </a>
-                    </li>
-                    <li class="hidden md:block w-px h-8 bg-white/20"></li>
-                    <li class="login">
-                        <a href="../pages/login.html" class="nav-link text-white flex items-center gap-2 px-4 py-3 rounded-lg hover:bg-destaque hover:scale-105 transition">
-                            <i class="bi bi-person"></i>
-                            <span>Login</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+            <ul id="menu" role="list" class="hidden md:flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 absolute md:static top-16 left-0 w-full md:w-auto bg-escuro md:bg-transparent shadow-lg md:shadow-none py-4 md:py-0">
+                <li class="index">
+                    <a href="../index.html" class="flex items-center gap-2 px-5 py-3 md:px-4 md:py-2 text-white no-underline uppercase text-sm font-medium rounded-lg hover:bg-destaque hover:scale-105 transition">
+                        <i class="bi bi-house"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li class="hidden md:block w-px h-6 bg-white/20"></li>
+                <li class="contatos">
+                    <a href="../pages/contatos.html" class="flex items-center gap-2 px-5 py-3 md:px-4 md:py-2 text-white no-underline uppercase text-sm font-medium rounded-lg hover:bg-destaque hover:scale-105 transition">
+                        <i class="bi bi-telephone"></i>
+                        <span>Contatos</span>
+                    </a>
+                </li>
+                <li class="hidden md:block w-px h-6 bg-white/20"></li>
+                <li class="login">
+                    <a href="../pages/login.html" class="flex items-center gap-2 px-5 py-3 md:px-4 md:py-2 text-white no-underline uppercase text-sm font-medium rounded-lg hover:bg-destaque hover:scale-105 transition">
+                        <i class="bi bi-person"></i>
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="flex flex-col items-center justify-center min-h-[calc(100dvh-8rem)] w-full p-5">
-        <section class="login card-glass animate-fade-in-up flex flex-col items-center justify-center w-full max-w-md p-8">
+    <main class="flex flex-col items-center justify-center min-h-[calc(100dvh-4rem)] w-full p-5">
+        <section class="card-glass animate-fade-in-up flex flex-col items-center justify-center w-full max-w-md p-8">
             <h1 class="text-3xl md:text-4xl lg:text-5xl text-white mb-6 text-center">Login</h1>
-            <div class="login-container flex flex-col items-center justify-center w-full">
+            <div class="flex flex-col items-center justify-center w-full">
                 <form id="form-login" autocomplete="on" novalidate class="flex flex-col items-center justify-center w-full gap-4">
-                    <div class="input-group flex flex-col items-center w-full">
+                    <div class="flex flex-col items-center w-full">
                         <label for="email" class="text-claro text-sm md:text-base mb-1 text-left pl-1 w-full">
                             <i class="bi bi-envelope mr-1"></i> Email
                         </label>
                         <input type="email" id="email" name="email" placeholder="Digite seu email" required autocomplete="email" class="input-field">
                     </div>
-                    <div class="input-group flex flex-col items-center w-full">
+                    <div class="flex flex-col items-center w-full">
                         <label for="senha" class="text-claro text-sm md:text-base mb-1 text-left pl-1 w-full">
                             <i class="bi bi-lock mr-1"></i> Senha
                         </label>
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required minlength="6" autocomplete="current-password" class="input-field">
                     </div>
-                    <button type="submit" class="login-btn btn-primary mt-2">Login</button>
-                    <a class="forgot-password botao-modal text-sm md:text-base text-azul text-center w-full no-underline hover:text-destaque hover:underline transition bg-transparent border-none py-2 cursor-pointer" onclick="esqueceuASenha()">Esqueci minha senha</a>
-                    <a class="register text-sm md:text-base text-azul text-center w-full no-underline hover:text-destaque hover:underline transition py-2" href="../pages/cadastro.html">Não tenho uma conta</a>
+                    <button type="submit" class="btn-primary mt-2">Login</button>
+                    <a class="botao-modal text-sm md:text-base text-azul text-center w-full no-underline hover:text-destaque hover:underline transition bg-transparent border-none py-2 cursor-pointer" onclick="esqueceuASenha()">Esqueci minha senha</a>
+                    <a class="text-sm md:text-base text-azul text-center w-full no-underline hover:text-destaque hover:underline transition py-2" href="../pages/cadastro.html">Não tenho uma conta</a>
                 </form>
             </div>
         </section>
 
         <aside>
             <div class="modal-fundo">
-                <div class="modal-conteudo card-glass-modal w-[90vw] max-w-[480px] text-center relative">
+                <div class="card-glass-modal w-[90vw] max-w-[480px] text-center relative p-8">
                     <h2 class="text-escuro text-2xl font-semibold mb-6 text-center">Esqueci minha senha</h2>
                     <form id="form-recuperacao" autocomplete="on">
-                        <div class="input-group">
-                            <input class="forgot-password-input w-full text-base md:text-lg text-escuro py-3.5 px-4 rounded-xl border-2 border-gray-300 bg-gray-100 focus:outline-none focus:border-azul focus:bg-white focus:shadow-[0_0_0_3px_rgba(0,123,255,0.15)] transition" type="email" id="email-recuperacao" name="email-recuperacao" placeholder="Digite seu email" required autocomplete="email">
-                            <button class="forgot-password-btn w-full text-base md:text-lg text-white py-3.5 px-4 rounded-xl bg-azul border-none hover:bg-destaque hover:-translate-y-0.5 transition cursor-pointer font-ubuntu font-semibold mt-3" type="submit" aria-label="Enviar email">Enviar</button>
+                        <div class="flex flex-col w-full">
+                            <input type="email" id="email-recuperacao" name="email-recuperacao" placeholder="Digite seu email" required autocomplete="email" class="forgot-password-input w-full text-base md:text-lg text-escuro py-3.5 px-4 rounded-xl border-2 border-gray-300 bg-gray-100 focus:outline-none focus:border-azul focus:bg-white focus:shadow-[0_0_0_3px_rgba(0,123,255,0.15)] transition">
+                            <button type="submit" aria-label="Enviar email" class="w-full text-base md:text-lg text-white py-3.5 px-4 rounded-xl bg-azul border-none hover:bg-destaque hover:-translate-y-0.5 transition cursor-pointer font-ubuntu font-semibold mt-3">Enviar</button>
                         </div>
-                        <button type="button" class="botao-fechar absolute top-4 right-4 text-xl bg-transparent text-erro hover:bg-erro/10 hover:scale-120 transition cursor-pointer w-8 h-8 flex items-center justify-center rounded-full" aria-label="Fechar modal">
+                        <button type="button" aria-label="Fechar modal" class="botao-fechar absolute top-4 right-4 text-xl bg-transparent text-erro hover:bg-erro/10 hover:scale-120 transition cursor-pointer w-8 h-8 flex items-center justify-center rounded-full">
                             <i class="bi bi-x"></i>
                         </button>
                     </form>
@@ -88,18 +86,7 @@
         Todos os direitos reservados © - Desenvolvido por: <a href="https://github.com/Brrn91" target="_blank" rel="noopener noreferrer" class="text-claro no-underline pl-2 font-bold hover:text-azul hover:underline transition">Lucas Bruno</a>
     </footer>
     <script src="../scripts/login.js"></script>
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-        menuToggle?.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-            menu.classList.toggle('hidden');
-            const icon = menuToggle.querySelector('i');
-            icon.classList.toggle('bi-list');
-            icon.classList.toggle('bi-x-lg');
-        });
-    </script>
+    <script src="../scripts/nav.js"></script>
 </body>
 
 </html>

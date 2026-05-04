@@ -9,12 +9,12 @@ function validarSenhasIguais() {
 
   if (confirmarSenha && senha !== confirmarSenha) {
     passwordError.textContent = "As senhas não coincidem";
-    confirmarSenhaInput.style.borderColor = "var(--erro)";
+    confirmarSenhaInput.style.borderColor = "#dc3545";
     return false;
   } else {
     passwordError.textContent = "";
     if (confirmarSenha) {
-      confirmarSenhaInput.style.borderColor = "var(--sucesso)";
+      confirmarSenhaInput.style.borderColor = "#28a745";
     }
     return true;
   }
@@ -22,9 +22,9 @@ function validarSenhasIguais() {
 
 senhaInput.addEventListener("input", function () {
   if (senhaInput.value.length > 0 && senhaInput.value.length < 6) {
-    senhaInput.style.borderColor = "var(--erro)";
+    senhaInput.style.borderColor = "#dc3545";
   } else if (senhaInput.value.length >= 6) {
-    senhaInput.style.borderColor = "var(--sucesso)";
+    senhaInput.style.borderColor = "#28a745";
   } else {
     senhaInput.style.borderColor = "";
   }
