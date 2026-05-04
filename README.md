@@ -112,22 +112,33 @@ Execute o projeto:
 
 ## 📂 Estrutura do Projeto
 
-```bash
-📦 agendamento-barbearia
- ┣ 📂 assets
- ┣ 📂 pages
- ┃ ┣ 📜 login.html
- ┃ ┣ 📜 agendamento.html
- ┃ ┣ 📜 admin.html
- ┃ ┗ 📜 contato.html
- ┣ 📂 scripts
- ┃ ┗ 📜 main.js
- ┣ 📂 styles
- ┃ ┣ 📜 contatos.css
- ┃ ┣ 📜 index.css
- ┃ ┗ 📜 login.css
- ┣ 📜 index.html
- ┗ 📜 README.md
+```
+├── 📁 assets
+│   └── 📁 img
+│       ├── 🖼️ bg.jpg
+│       └── 🖼️ logo.png
+├── 📁 pages
+│   ├── 🌐 agendamento.html
+│   ├── 🌐 cadastro.html
+│   ├── 🌐 contatos.html
+│   └── 🌐 login.html
+├── 📁 scripts
+│   ├── 📄 agendamento.js
+│   ├── 📄 cadastro.js
+│   ├── 📄 login.js
+│   └── 📄 nav.js
+├── 📁 styles
+│   ├── 🎨 input.css
+│   └── 🎨 output.css
+├── ⚙️ .gitattributes
+├── ⚙️ .gitignore
+├── 📄 LICENSE
+├── 📝 README.md
+├── 🌐 index.html
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+├── 📄 postcss.config.js
+└── 📄 tailwind.config.js
 ```
 
 ### Descrição
