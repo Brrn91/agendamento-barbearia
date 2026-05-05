@@ -82,9 +82,9 @@ Fluxo básico do sistema:
 
 Sugestão:
 
-```
-./docs/agendamento-barbearia.gif
-```
+
+[AGENDAMENTO-BARBEARIA-DEMO](./preview.gif)
+
 
 ---
 
