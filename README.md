@@ -34,24 +34,23 @@ Aplicar na prática:
 - Página de **login**
 - Escolha de **serviços**
 - Seleção de **data e horário**
-- Visualização de **horários disponíveis**
-- Confirmação de agendamento
+- Confirmação de agendamento - Em desenvolvimento
 
 ---
 
 ### 🛠 Painel Administrativo
 
-- Alteração de horários disponíveis
-- Bloqueio de dias (agenda fechada)
-- Atualização de valores dos serviços
-- Controle geral dos agendamentos
+- Alteração de horários disponíveis - Em desenvolvimento
+- Bloqueio de dias (agenda fechada) - Em desenvolvimento
+- Atualização de valores dos serviços - Em desenvolvimento
+- Controle geral dos agendamentos - Em desenvolvimento
 
 ---
 
 ### 📞 Contato
 
 - Página com informações de contato
-- Possibilidade de integração futura com WhatsApp ou redes sociais
+- Possibilidade de integração futura com WhatsApp ou redes sociais - Em desenvolvimento
 
 ---
 
@@ -75,7 +74,7 @@ Aplicar na prática:
 Fluxo básico do sistema:
 
 ```bash
-1. Usuário faz login
+1. Usuário entra no site
 2. Seleciona serviço
 3. Escolhe data e horário disponível
 4. Confirma agendamento
@@ -84,8 +83,7 @@ Fluxo básico do sistema:
 Sugestão:
 
 ```
-/docs/screenshot.png
-/docs/demo.gif
+./docs/agendamento-barbearia.gif
 ```
 
 ---
@@ -130,23 +128,15 @@ Execute o projeto:
 ├── 📁 styles
 │   ├── 🎨 input.css
 │   └── 🎨 output.css
-├── ⚙️ .gitattributes
-├── ⚙️ .gitignore
 ├── 📄 LICENSE
 ├── 📝 README.md
-├── 🌐 index.html
-├── ⚙️ package-lock.json
-├── ⚙️ package.json
-├── 📄 postcss.config.js
-└── 📄 tailwind.config.js
+└── 🌐 index.html
 ```
 
 ### Descrição
 
 - **pages/** → páginas do sistema
 - **assets/** → imagens e arquivos estáticos
-- **main.js** → lógica da aplicação
-- **index.css** → estilização
 
 ---
 
