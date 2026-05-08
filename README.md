@@ -83,7 +83,7 @@ Fluxo básico do sistema:
 Sugestão:
 
 
-[AGENDAMENTO-BARBEARIA-DEMO](./preview.gif)
+![AGENDAMENTO-BARBEARIA-DEMO](./preview.gif)
 
 
 ---
